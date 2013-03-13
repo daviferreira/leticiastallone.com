@@ -10,5 +10,5 @@ class TestPostModel(TestCase):
     def tearDown(self):
         Post.objects.all().delete()
 
-    def testItShouldAlterThePostsCount(self):
-        self.assertEqual(len(Post.objects.all()), 1)
+    def test_unicode_should_return_the_post_title(self):
+        self.assertEqual(str(self.post), self.post.title)
