@@ -5,4 +5,11 @@ from .models import Article
 class ArticleAdmin(admin.ModelAdmin):
     search_fields = ["title"]
 
+    class Media:
+        js = [
+            '/static/grappelli/tinymce/jscripts/tiny_mce/tiny_mce.js',
+            '/static/grappelli/tinymce_setup/tinymce_setup.js',
+        ]
+
+
 admin.site.register(Article, ArticleAdmin)
