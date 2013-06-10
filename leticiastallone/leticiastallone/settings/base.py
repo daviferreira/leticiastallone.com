@@ -187,6 +187,7 @@ DJANGO_APPS = (
     # Grapelli admin interface template
     # Must be declarated before django.contrib.admin
     'grappelli',
+    'filebrowser',
 
     # Admin panel and documentation:
     'django.contrib.admin',
