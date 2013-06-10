@@ -1,3 +1,5 @@
+# coding: utf-8
+
 """Common settings and globals."""
 
 
@@ -14,6 +16,9 @@ SITE_ROOT = dirname(DJANGO_ROOT)
 
 # Site name:
 SITE_NAME = basename(DJANGO_ROOT)
+
+# Grappeli Admin
+GRAPPELLI_ADMIN_TITLE = u'LetíciaStallone.com'
 
 # Add our project to our pythonpath, this way we don't need to type our project
 # name in our dotted import paths:
