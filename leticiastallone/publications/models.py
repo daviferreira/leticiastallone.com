@@ -1,6 +1,8 @@
 from django.conf import settings
 from django.db import models
 
+from taggit.managers import TaggableManager
+
 
 class Article(models.Model):
     title = models.CharField(max_length=255)
@@ -8,7 +10,7 @@ class Article(models.Model):
     authors = models.TextField()
     journal = models.CharField(max_length=255)
     pdf_file = models.FileField(upload_to=settings.MEDIA_ROOT)
-    keywords = models.CharField(max_length=200)
+    keywords = TaggableManager()
     pub_date = models.DateTimeField(auto_now_add=True)
 
     def __unicode__(self):
