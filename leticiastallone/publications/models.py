@@ -10,6 +10,7 @@ class Article(models.Model):
     authors = models.TextField()
     journal = models.CharField(max_length=255)
     pdf_file = models.FileField(upload_to=settings.MEDIA_ROOT, blank=True, null=True)
+    link = models.CharField(max_length=255, blank=True, null=True)
     keywords = TaggableManager(blank=True)
     pub_date = models.DateTimeField(auto_now_add=True)
 
