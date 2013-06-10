@@ -9,8 +9,8 @@ class Article(models.Model):
     abstract = models.TextField()
     authors = models.TextField()
     journal = models.CharField(max_length=255)
-    pdf_file = models.FileField(upload_to=settings.MEDIA_ROOT)
-    keywords = TaggableManager()
+    pdf_file = models.FileField(upload_to=settings.MEDIA_ROOT, blank=True, null=True)
+    keywords = TaggableManager(blank=True)
     pub_date = models.DateTimeField(auto_now_add=True)
 
     def __unicode__(self):
