@@ -6,7 +6,6 @@ class Post(models.Model):
     body = models.TextField()
     tags = models.CharField(max_length=200)
     is_published = models.BooleanField(default=False)
-    created = models.DateTimeField(auto_now_add=True)
 
     def __unicode__(self):
         return self.title
