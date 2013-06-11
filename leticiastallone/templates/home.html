@@ -30,11 +30,11 @@
 <div class="six columns omega">
     <article class="post-item">
         <header>
-            <h4 class="hat">{{ posts.1.tags.all|join:', ' }}</h4>
-            <h2 class="post-title"><a href="{% url 'post-detail' posts.1.slug %}">{{ posts.1.title }}</a></h2>
+            <h4 class="hat">{{ posts.2.tags.all|join:', ' }}</h4>
+            <h2 class="post-title"><a href="{% url 'post-detail' posts.2.slug %}">{{ posts.2.title }}</a></h2>
         </header>
-        <a href="{% url 'post-detail' posts.1.slug %}">{{ posts.1.abstract|safe }}</a>
-        <p class="read-more"><a href="{% url 'post-detail' posts.1.slug %}">Leia mais&hellip;</a></p>
+        <a href="{% url 'post-detail' posts.2.slug %}">{{ posts.2.abstract|safe }}</a>
+        <p class="read-more"><a href="{% url 'post-detail' posts.2.slug %}">Leia mais&hellip;</a></p>
     </article>
 </div>
 {% endif %}
