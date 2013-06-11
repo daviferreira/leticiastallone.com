@@ -1,3 +1,4 @@
+{% load show_menu %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,13 +21,7 @@
                     <h1 class="title">Letícia Stallone<small>.com</small></h1>
                 </header>
                 <div class="eight columns omega">
-                    <nav class="main-menu clearfix">
-                        <a href="#">home</a>
-                        <a href="#">publicações</a>
-                        <a href="#">blog</a>
-                        <a href="#">links</a>
-                        <a href="#">contato</a>
-                    </nav>
+                    {% show_menu %}
                 </div>
             </div>
         </section>

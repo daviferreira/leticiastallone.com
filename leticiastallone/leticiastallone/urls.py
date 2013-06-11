@@ -24,7 +24,7 @@ urlpatterns = patterns('',
     url(r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/filebrowser/', include(site.urls)),
 
-    # Pages
+    # Local apps
     url(r'^page/', include('pages.urls')),
 
     # Uncomment the next line to enable the admin:

@@ -99,6 +99,7 @@ a {
         padding: 0 12px;
         font-family: $font;
         text-decoration: none;
+        text-transform: lowercase;
         color: #000;
 
         &:after {

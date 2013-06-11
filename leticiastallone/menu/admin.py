@@ -3,6 +3,7 @@ from .models import ItemMenu
 
 
 class ItemMenuAdmin(admin.ModelAdmin):
-    search_fields = ["label", "link"]
+    search_fields = ['label', 'link']
+    list_display = ['label', 'link', 'order']
 
 admin.site.register(ItemMenu, ItemMenuAdmin)

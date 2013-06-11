@@ -1,0 +1,5 @@
+<nav class="main-menu clearfix">
+    {% for item in itens %}
+        <a href="{{ item.link }}">{{ item.label }}</a>
+    {% endfor %}
+</nav>
