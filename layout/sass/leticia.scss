@@ -5,16 +5,19 @@
 $font: "ProximaNovaRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font_bold: "ProximaNovaBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font_light: "ProximaNovaLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif: Times, Georgia, TimesNewRoman, serif;
-$link_color: #547980;
-$link_hover: #75ad78;
+$serif: Georgia, Cambria, "Times New Roman", Times, serif;
+$link_color: #c44d58;
+$link_hover: #67232a;
 $border_color: #dbdbdb;
-$title_color: #594f4f;
+$title_color: #000;
 
 body {
     background: #fff;
-    font-family: $font;
-    font-size: 16px;
+    font-family: $serif;
+    font-weight: 400;
+    color: #333332;
+    font-size: 18px;
+    line-height: 1.4;
 }
 
 a {
@@ -35,7 +38,7 @@ a {
         font-family: $font_bold;
         font-weight: normal;
         letter-spacing: -2px;
-        color: $title_color;
+        color: #556270;
     }
 
     small {
@@ -44,7 +47,6 @@ a {
         font-family: $font_light;
         font-size: 28px;
         font-weight: normal;
-        line-height: 34px;
         color: #999;
     }
 }
@@ -59,8 +61,9 @@ a {
         display: inline-block;
         height: 20px;
         padding: 0 12px;
+        font-family: $font;
         text-decoration: none;
-        color: $link_color;
+        color: #000;
 
         &:after {
             position: absolute;
@@ -119,6 +122,10 @@ a {
     }
 }
 
+.aside-links {
+    background-color: lighten($link_color, 30);
+}
+
 .post-item {
     padding: 20px;
     .hat {
@@ -132,7 +139,7 @@ a {
         font-family: $font_bold;
         font-weight: normal;
         letter-spacing: -1px;
-        line-height: 36px;
+        line-height: 1.2;
         color: $title_color;
     }
     article {
@@ -142,11 +149,8 @@ a {
             border-bottom: none;
         }
         p {
-            line-height: 24px;
+            line-height: 1.2;
         }
-    }
-    .read-more {
-        text-align: right;
     }
     .post-title, .post-abstract {
         a {
@@ -163,13 +167,40 @@ a {
         padding-top: 0;
         .post-title {
             font-size: 26px;
-            line-height: 30px;
         }
+    }
+}
+
+.publications {
+    margin-top: 10px;
+    padding-bottom: 40px;
+    background-color: lighten(#ccc, 10);
+    header {
+        box-sizing: border-box;
+        position: relative;
+        border-top: 1px solid #dededc;
+        height: 40px;
+    }
+    .title {
+        position: absolute;
+        top: -18px;
+        left: 50%;
+        width: 140px;
+        margin: 0;
+        margin-left: -70px;
+        background-color: #fff;
+        border: 1px solid #dededc;
+        box-sizing: border-box;
+        color: #333;
+        font-family: $font;
+        font-size: 14px;
+        text-align: center;
+        text-transform: uppercase;
     }
 }
 
 footer {
     min-height: 200px;
-    background: #333;
+    background: #556270;
     color: #f7f7f7;
 }

@@ -7,6 +7,7 @@ class ItemLink(models.Model):
     link = models.URLField()
     order = models.IntegerField(default=100000)
     new_window = models.BooleanField(default=False)
+    highlight = models.BooleanField(default=False)
 
     def __unicode__(self):
         return "%s <%s>" % (self.title, self.link)
