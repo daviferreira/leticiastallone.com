@@ -4,6 +4,7 @@ from .models import Post
 
 class PostAdmin(admin.ModelAdmin):
     search_fields = ["title"]
+    prepopulated_fields = {"slug": ("title",)}
 
     class Media:
         js = [

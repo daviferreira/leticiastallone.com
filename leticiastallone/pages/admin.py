@@ -4,6 +4,7 @@ from .models import Page
 
 class PageAdmin(admin.ModelAdmin):
     search_fields = ["title"]
+    prepopulated_fields = {"slug": ("title",)}
 
     class Media:
         js = [
