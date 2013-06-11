@@ -6,8 +6,10 @@ $font: "ProximaNovaRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font_bold: "ProximaNovaBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font_light: "ProximaNovaLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif: Times, Georgia, TimesNewRoman, serif;
-$link_color: #ecdead;
+$link_color: #547980;
+$link_hover: #75ad78;
 $border_color: #dbdbdb;
+$title_color: #594f4f;
 
 body {
     background: #fff;
@@ -15,20 +17,30 @@ body {
     font-size: 16px;
 }
 
+a {
+    color: $link_color;
+    text-decoration: none;
+    @include transition(color .3s ease-in-out);
+    &:hover {
+        color: $link_hover;
+    }
+}
+
 .masthead {
     margin: 20px 0 0;
     padding: 20px 0;
-    border-bottom: 6px solid #000;
+    border-bottom: 6px solid $link_color;
 
     .title {
         font-family: $font_bold;
-        font-weight: bold;
-        letter-spacing: -1px;
+        font-weight: normal;
+        letter-spacing: -2px;
+        color: $title_color;
     }
 
     small {
         display: inline-block;
-        margin-left: 6px;
+        margin-left: 2px;
         font-family: $font_light;
         font-size: 28px;
         font-weight: normal;
@@ -60,7 +72,7 @@ body {
         }
 
         &:hover {
-            color: darken($link_color, 8);
+            color: $link_hover;
         }
 
         &:first-child {
@@ -76,6 +88,10 @@ body {
     }
 }
 
+.aside-box {
+    padding: 20px;
+}
+
 .aside-about {
     background-color: $link_color;
     color: #fff;
@@ -85,7 +101,6 @@ body {
     font-style: italic;
     line-height: 24px;
     letter-spacing: -1px;
-    @include border-bottom-radius(5px);
 
     figure {
         float: left;
@@ -102,15 +117,10 @@ body {
         margin: 0;
         text-align: center;
     }
-
-    .box-container {
-        padding: 40px;
-        border-top: none;
-    }
 }
 
-.box-blog {
-    padding: 40px;
+.post-item {
+    padding: 20px;
     .hat {
         font-family: $font_light;
         font-size: 12px;
@@ -120,9 +130,10 @@ body {
     .post-title {
         margin: 0 0 20px 0;
         font-family: $font_bold;
-        font-weight: bold;
+        font-weight: normal;
         letter-spacing: -1px;
-        line-height: 40px;
+        line-height: 36px;
+        color: $title_color;
     }
     article {
         margin-bottom: 40px;
@@ -134,10 +145,31 @@ body {
             line-height: 24px;
         }
     }
+    .read-more {
+        text-align: right;
+    }
+    .post-title, .post-abstract {
+        a {
+            color: #333;
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+}
+
+.six {
+    .post-item {
+        padding-top: 0;
+        .post-title {
+            font-size: 26px;
+            line-height: 30px;
+        }
+    }
 }
 
 footer {
     min-height: 200px;
-    background: #000;
+    background: #333;
     color: #f7f7f7;
 }
