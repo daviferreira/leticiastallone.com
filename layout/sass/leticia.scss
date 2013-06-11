@@ -1,6 +1,8 @@
 @import "clearfix";
 @import "compass/css3";
 
+$sans_serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif: Times, Georgia, TimesNewRoman, serif;
 $link_color: #df0d32;
 
 body {
@@ -8,12 +10,12 @@ body {
 }
 
 .masthead {
-    margin: 20px 0 40px 0;
+    margin: 20px 0 0;
     padding: 20px 0;
     border-bottom: 6px solid #000;
 
     .title {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: $sans_serif;
         font-weight: bold;
         letter-spacing: -1px;
     }
@@ -21,7 +23,7 @@ body {
     small {
         display: inline-block;
         margin-left: 6px;
-        font-family: Times, Georgia, TimesNewRoman, serif;
+        font-family: $serif;
         font-size: 28px;
         font-style: oblique;
         line-height: 34px;
@@ -31,7 +33,7 @@ body {
 
 .main-menu {
     margin: 24px 0 0;
-    font-family: Times, Georgia, TimesNewRoman, serif;
+    font-family: $serif;
     font-size: 16px;
     text-align: right;
 
@@ -54,11 +56,33 @@ body {
 }
 
 .aside-about {
+    background-color: #fff;
+    color: #333;
+    font-family: $serif;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 24px;
+    letter-spacing: -1px;
+
     figure {
         float: left;
         overflow: hidden;
+        margin: 20px 40px 20px 0;
         img {
             @include border-radius(50%);
         }
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .box-container {
+        padding: 40px;
+        border-top: none;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        @include border-bottom-right-radius(5px);
     }
 }
