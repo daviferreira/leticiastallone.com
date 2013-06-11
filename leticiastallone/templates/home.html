@@ -1,38 +1,41 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+{% if posts.0 %}
 <article class="post-item">
     <header>
-        <h4 class="hat">Linguistica, humor</h4>
-        <h2 class="post-title"><a href="#">A co-construção do humor conversacional para encobrir diferentes objetivos</a></h2>
+        <h4 class="hat">{{ posts.0.tags.all|join:', ' }}</h4>
+        <h2 class="post-title"><a href="{% url 'post-detail' posts.0.slug %}">{{ posts.0.title }}</a></h2>
     </header>
-    <p class="post-abstract"><a href="#">Neste artigo, propomos contribuir para os estudos do humor conversacional em
-    encontros informais, numa perspectiva interacional. Mostramos a co-construção do humor,
-    entre amigos, com base no enquadre da brincadeira (Bateson, 1972)</a></p>
-    <p class="read-more"><a href="#">Leia mais &hellip;</a></p>
+    <a href="{% url 'post-detail' posts.0.slug %}">{{ posts.0.abstract|safe }}</a>
+    <p class="read-more"><a href="{% url 'post-detail' posts.0.slug %}">Leia mais&hellip;</a></p>
 </article>
+{% endif %}
+
+{% if posts.1 %}
 <div class="six columns alpha">
     <article class="post-item">
         <header>
-            <h4 class="hat">Linguistica, humor</h4>
-            <h2 class="post-title"><a href="#">A co-construção do humor conversacional para encobrir diferentes objetivos</a></h2>
+            <h4 class="hat">{{ posts.1.tags.all|join:', ' }}</h4>
+            <h2 class="post-title"><a href="{% url 'post-detail' posts.1.slug %}">{{ posts.1.title }}</a></h2>
         </header>
-        <p class="post-abstract"><a href="#">Neste artigo, propomos contribuir para os estudos do humor conversacional em
-        encontros informais, numa perspectiva interacional. Mostramos a co-construção do humor,
-        entre amigos, com base no enquadre da brincadeira (Bateson, 1972)</a></p>
-        <p class="read-more"><a href="#">Leia mais &hellip;</a></p>
+        <a href="{% url 'post-detail' posts.1.slug %}">{{ posts.1.abstract|safe }}</a>
+        <p class="read-more"><a href="{% url 'post-detail' posts.1.slug %}">Leia mais&hellip;</a></p>
     </article>
 </div>
+{% endif %}
+
+{% if posts.2 %}
 <div class="six columns omega">
-     <article class="post-item">
+    <article class="post-item">
         <header>
-            <h4 class="hat">Linguistica, humor</h4>
-            <h2 class="post-title"><a href="#">A co-construção do humor conversacional para encobrir diferentes objetivos</a></h2>
+            <h4 class="hat">{{ posts.1.tags.all|join:', ' }}</h4>
+            <h2 class="post-title"><a href="{% url 'post-detail' posts.1.slug %}">{{ posts.1.title }}</a></h2>
         </header>
-        <p class="post-abstract"><a href="#">Neste artigo, propomos contribuir para os estudos do humor conversacional em
-        encontros informais, numa perspectiva interacional. Mostramos a co-construção do humor,
-        entre amigos, com base no enquadre da brincadeira (Bateson, 1972)</a></p>
-        <p class="read-more"><a href="#">Leia mais &hellip;</a></p>
+        <a href="{% url 'post-detail' posts.1.slug %}">{{ posts.1.abstract|safe }}</a>
+        <p class="read-more"><a href="{% url 'post-detail' posts.1.slug %}">Leia mais&hellip;</a></p>
     </article>
 </div>
+{% endif %}
 {% endblock content %}

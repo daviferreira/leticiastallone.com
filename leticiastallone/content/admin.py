@@ -2,7 +2,8 @@ from django.contrib import admin
 
 
 class ContentAdmin(admin.ModelAdmin):
-    search_fields = ['title', 'abstract', 'body', 'slug']
+    search_fields = ['title', 'abstract', 'body', 'slug',]
+    list_display = ['title', 'slug', 'is_published', 'pub_date',]
     prepopulated_fields = {'slug': ('title',)}
 
     class Media:

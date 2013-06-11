@@ -4,6 +4,7 @@ from django.shortcuts import render_to_response
 from django.views.generic.detail import DetailView
 
 from .models import Page
+from blog.models import Post
 
 
 class PageDetailView(DetailView):
@@ -16,6 +17,8 @@ class PageDetailView(DetailView):
 
 
 def home(request):
+    posts = Post.objects.filter(is_published=True).order_by('-pub_date')[:3]
     return render_to_response('home.html', {
+        'posts': posts,
         'STATIC_URL': settings.STATIC_URL
     }, mimetype='text/html')

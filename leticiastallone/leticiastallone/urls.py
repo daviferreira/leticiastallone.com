@@ -27,6 +27,7 @@ urlpatterns = patterns('',
     # Local apps
     url(r'^page/', include('pages.urls')),
     url(r'^publication/', include('publications.urls')),
+    url(r'^blog/', include('blog.urls')),
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),

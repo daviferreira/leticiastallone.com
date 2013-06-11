@@ -215,12 +215,10 @@ a {
             line-height: 1.2;
         }
     }
-    .post-title, .post-abstract {
-        a {
-            color: #333;
-            &:hover {
-                color: #000;
-            }
+    .post-title a, a p {
+        color: #333;
+        &:hover {
+            color: #000;
         }
     }
 }
