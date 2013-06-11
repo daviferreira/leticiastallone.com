@@ -1,7 +1,29 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container">
-    <h1>{{ post.title }}</h1>
+<article class="post-page">
+    <div class="meta">{{ post.tags.all|join:", " }} {{ post.pub_date|date:'F \d\e Y' }}</div>
+    <h1 class="post-title">{{ post.title }}</h1>
+    <div class="abstract">
+        {{ post.abstract|safe }}
+    </div>
+    <div class="body">
+        {{ post.body|safe }}
+    </div>
+</article>
+
+<div class="comments" id="comments">
+    <div id="disqus_thread"></div>
 </div>
 {% endblock content %}
+
+{% block extra_js %}
+<script type="text/javascript">
+    var disqus_shortname = 'letciastallone'; // required: replace example with your forum shortname
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+{% endblock extra_js %}

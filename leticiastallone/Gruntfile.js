@@ -30,6 +30,7 @@ module.exports = function(grunt) {
       strict: {
         options: {
           'box-sizing': false,
+          'qualified-headings': false,
           import: 2
         },
         src: ['static/stylesheets/leticia.css']

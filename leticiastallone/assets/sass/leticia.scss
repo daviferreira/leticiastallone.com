@@ -29,11 +29,11 @@ a {
     }
 }
 
-.hat, .masthead small, .credits {
+.hat, .masthead small, .credits, .meta {
     font-family: $font_light;
 }
 
-.hat {
+.hat, .meta {
     font-size: 12px;
 }
 
@@ -76,7 +76,6 @@ a {
         margin: 0 auto;
     }
     .title {
-        font-size: 26px;
         margin: 0;
         color: #999;
     }
@@ -230,7 +229,9 @@ a {
 }
 
 .six .post-title,
-.publication-title {
+.publication-title,
+.masthead-fixed .title,
+.post-page .abstract {
     font-size: 26px;
 }
 
@@ -314,4 +315,27 @@ footer {
         padding-top: 20px;
         border-top: 1px solid #9eb1d4;
     }
+}
+
+.post-page {
+    padding: 40px;
+    .abstract {
+        font-family: $font_light;
+        padding-bottom: 20px;
+    }
+    .body {
+        padding-top: 40px;
+        border-top: 1px solid #666;
+        h2 {
+            margin-top: 20px;
+        }
+    }
+    .meta {
+        text-transform: uppercase;
+        color: #535353;
+    }
+}
+
+.comments {
+    padding: 40px;
 }
