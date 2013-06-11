@@ -29,7 +29,7 @@ a {
     }
 }
 
-.hat, .masthead small {
+.hat, .masthead small, .credits {
     font-family: $font_light;
 }
 
@@ -164,6 +164,7 @@ a {
     text-align: center;
     .aside-box {
         padding-top: 30px;
+        padding-bottom: 10px;
         background-color: lighten($link_color, 20);
     }
     .title {
@@ -306,9 +307,13 @@ footer {
         margin-bottom: 10px;
         color: #acc0e6;
     }
+    ul {
+        margin-bottom: 0;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #1b1e24;
+    }
     .credits {
-        margin-top: 40px;
         padding-top: 20px;
-        border-top: 1px dotted darken(#fff, 50);
+        border-top: 1px solid #9eb1d4;
     }
 }
