@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from django.views.generic import TemplateView
+from django.views.generic.base import RedirectView
 
 from filebrowser.sites import site
 
@@ -10,7 +10,8 @@ admin.autodiscover()
 
 
 urlpatterns = patterns('',
-    url(r'^$', TemplateView.as_view(template_name='base.html')),
+    url(r'^$', 'pages.views.home', name='home'),
+    url(r'^index\.html?$', RedirectView.as_view(url='/'), name='index'),
 
     # Examples:
     # url(r'^$', 'leticiastallone.views.home', name='home'),
@@ -23,6 +24,8 @@ urlpatterns = patterns('',
     url(r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/filebrowser/', include(site.urls)),
 
+    # Pages
+    url(r'^page/', include('pages.urls')),
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),

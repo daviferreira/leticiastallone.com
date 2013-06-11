@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     jslint: {
-      files: ['javascripts/leticia.js'],
+      files: ['static/javascripts/leticia.js'],
       directives: {
         browser: true,
         unparam: true,
@@ -12,15 +12,15 @@ module.exports = function(grunt) {
     },
     uglify: {
       build: {
-        src: 'javascripts/leticia.js',
-        dest: 'javascripts/leticia.min.js'
+        src: 'static/javascripts/leticia.js',
+        dest: 'static/javascripts/leticia.min.js'
       }
     },
     compass: {
       dist: {
         options: {
-          sassDir: 'sass',
-          cssDir: 'stylesheets',
+          sassDir: 'assets/sass',
+          cssDir: 'static/stylesheets',
           outputStyle: 'compressed',
           noLineComments: true
         }
@@ -32,19 +32,19 @@ module.exports = function(grunt) {
           'box-sizing': false,
           import: 2
         },
-        src: ['stylesheets/leticia.css']
+        src: ['static/stylesheets/leticia.css']
       }
     },
     watch: {
       scripts: {
-        files: ['javascripts/leticia.js'],
+        files: ['static/javascripts/leticia.js'],
         tasks: ['js'],
         options: {
           debounceDelay: 250,
         }
       },
       styles: {
-        files: 'sass/**/*.scss',
+        files: 'assets/sass/**/*.scss',
         tasks: ['css'],
         options: {
           debounceDelay: 250,
