@@ -14,7 +14,7 @@ var timer,
             el.className = 'masthead masthead-fixed';
             setTimeout(function () {
                 el.style.marginTop = el.style.top = '0';
-            }, 200);
+            }, 100);
             contentEl.style.marginTop = '113px';
         } else if (scrollTop <= max && isFixed === true) {
             isFixed = false;
@@ -27,5 +27,5 @@ var timer,
 window.onscroll = function (e) {
     'use strict';
     clearTimeout(timer);
-    timer = setTimeout(setFixedHeader, 100);
+    timer = setTimeout(setFixedHeader, 50);
 };

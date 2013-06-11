@@ -1,4 +1,6 @@
 {% load show_menu %}
+{% load render_partial %}
+{% load show_publications %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,19 +28,39 @@
             </div>
         </section>
     </div>
+    <div class="container">
+        <div class="main-content sixteen columns" id="main-content">
+            <div class="row">
+                <div class="four columns alpha">
+                    <aside class="aside-about aside-box">
+                        <figure>
+                            <img src="https://si0.twimg.com/profile_images/1096147769/me_bigger.jpg">
+                        </figure>
+                        {% render_partial 'sobre-aside' %}
+                    </aside>
+                    <aside class="aside-links">
+                        <div class="aside-box">
+                            <ul>
+                                <li><a href="#">Curriculum Lattes</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+                <section class="twelve columns omega">
+                    {% block content %}{% endblock content %}
+                </section>
+            </div>
+        </div>
+    </div>
 
-    {% block content %}{% endblock content %}
+    {% show_publications %}
 
     <footer>
         <div class="container">
             <div class="row">
                 <div class="sixteen columns">
                     <div class="box">
-                        <h4 class="title">Entre em contato</h4>
-                        <ul>
-                            <li><a href="#">@leticiastallone</a></li>
-                            <li><a href="#">leticiastallone@yahoo.com</a></li>
-                        </ul>
+                        {% render_partial 'contact-footer' %}
                         <p class="credits">crafted with &hearts; by <a href="http://www.daviferreira.com" target="_blank">davi ferreira</a></p>
                     </div>
                 </div>
