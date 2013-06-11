@@ -1,16 +1,9 @@
 from django.contrib import admin
+from content.admin import ContentAdmin
 from .models import Page
 
 
-class PageAdmin(admin.ModelAdmin):
-    search_fields = ["title"]
-    prepopulated_fields = {"slug": ("title",)}
-
-    class Media:
-        js = [
-            '/static/grappelli/tinymce/jscripts/tiny_mce/tiny_mce.js',
-            '/static/grappelli/tinymce_setup/tinymce_setup.js',
-        ]
-
+class PageAdmin(ContentAdmin):
+    pass
 
 admin.site.register(Page, PageAdmin)
