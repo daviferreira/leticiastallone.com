@@ -10,21 +10,23 @@
 </head>
 <body>
     <div class="container">
-        <section class="masthead sixteen columns">
-            <header class="eight columns alpha">
-                <h1 class="title">Letícia Stallone<small>.com</small></h1>
-            </header>
-            <div class="eight columns omega">
-                <nav class="main-menu clearfix">
-                    <a href="#">home</a>
-                    <a href="#">publicações</a>
-                    <a href="#">blog</a>
-                    <a href="#">links</a>
-                    <a href="#">contato</a>
-                </nav>
+        <section id="masthead" class="masthead sixtten columns">
+            <div class="box">
+                <header class="eight columns alpha">
+                    <h1 class="title">Letícia Stallone<small>.com</small></h1>
+                </header>
+                <div class="eight columns omega">
+                    <nav class="main-menu clearfix">
+                        <a href="#">home</a>
+                        <a href="#">publicações</a>
+                        <a href="#">blog</a>
+                        <a href="#">links</a>
+                        <a href="#">contato</a>
+                    </nav>
+                </div>
             </div>
         </section>
-        <div class="main-content sixteen columns">
+        <div class="main-content sixteen columns" id="main-content">
             <div class="row">
                 <div class="four columns alpha">
                     <aside class="aside-about aside-box">
@@ -33,8 +35,12 @@
                         </figure>
                         <p>Skeleton has a familiar, lightweight 960 grid as its base, but elegantly scales down to downsized browser windows, tablets, mobile phones (in landscape and portrait). Go ahead, resize this page!</p>
                     </aside>
-                    <aside class="aside-links aside-box">
-                        <h4>Links</h4>
+                    <aside class="aside-links">
+                        <div class="aside-box">
+                            <ul>
+                                <li><a href="#">Curriculum Lattes</a></li>
+                            </ul>
+                        </div>
                     </aside>
                 </div>
                 <section class="twelve columns omega">
@@ -84,17 +90,43 @@
         <div class="container">
             <div class="row">
                 <div class="eight columns alpha">
-                    opa
+                     <article class="publication-item">
+                        <header>
+                            <h4 class="hat">Revista Caleidoscópio, Ed. 1 Vol. 13, Dezembro de 2013</h4>
+                            <h2 class="publication-title"><a href="#">A co-construção do humor conversacional para encobrir diferentes objetivos</a></h2>
+                        </header>
+                        <p class="read-more"><a href="#">Ler este artigo &rarr;</a></p>
+                    </article>
                 </div>
                 <div class="eight columns omega">
-                    chefe
+                     <article class="publication-item">
+                        <header>
+                            <h4 class="hat">Revista Caleidoscópio, Ed. 1 Vol. 13, Dezembro de 2013</h4>
+                            <h2 class="publication-title"><a href="#">A co-construção do humor conversacional para encobrir diferentes objetivos</a></h2>
+                        </header>
+                        <p class="read-more"><a href="#">Ler este artigo &rarr;</a></p>
+                    </article>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        opa
+        <div class="container">
+            <div class="row">
+                <div class="sixteen columns">
+                    <div class="box">
+                        <h4 class="title">Entre em contato</h4>
+                        <ul>
+                            <li><a href="#">@leticiastallone</a></li>
+                            <li><a href="#">leticiastallone@yahoo.com</a></li>
+                        </ul>
+                        <p class="credits">developed with &hearts; by <a href="http://www.daviferreira.com">davi ferreira</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
+    <script src="javascripts/leticia.js"></script>
 </body>
 </html>
