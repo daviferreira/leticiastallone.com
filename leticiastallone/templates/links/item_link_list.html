@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="links-container">
+    <ul class="links">
+        {% for link in links %}
+        <li>
+            <a href="{{ link.link }}"{% if link.new_window %} target="_blank"{% endif %} title="{{ link.title }}">
+                <h4>{{ link.title}}</h4>
+                {% if link.description %}
+                    <p>{{ link.description }}</p>
+                {% endif %}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock content %}

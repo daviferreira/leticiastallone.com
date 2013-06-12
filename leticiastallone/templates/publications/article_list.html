@@ -8,9 +8,7 @@
     <div class="abstract">
         {{ article.abstract|safe }}
     </div>
-    <div class="body">
-        {{ article.body|safe }}
-    </div>
+    <p class="read-more"><a href="{% url 'article-detail' article.slug %}">Ler este artigo &rarr;</a></p>
 </article>
 {% endfor %}
 {% endblock content %}

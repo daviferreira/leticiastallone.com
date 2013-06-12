@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for post in posts %}
+<article class="post-page">
+    <div class="meta">{{ post.journal }} &bullet; {{ post.pub_date|date:'F \d\e Y' }}</div>
+    <h1 class="post-title">{{ post.title }}</h1>
+    <div class="abstract">
+        {{ post.abstract|safe }}
+    </div>
+    <p class="read-more"><a href="{% url 'post-detail' post.slug %}">Leia mais&hellip;</a></p>
+</article>
+{% endfor %}
+{% endblock content %}

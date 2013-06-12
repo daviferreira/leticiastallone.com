@@ -6,6 +6,8 @@ from django.views.generic.base import RedirectView
 
 from filebrowser.sites import site
 
+from blog.models import Post
+from links.models import ItemLink
 from publications.models import Article
 
 
@@ -37,9 +39,23 @@ urlpatterns = patterns('',
         ),
        name='publications'),
     url(r'^publication/', include('publications.urls')),
+    url(r'^blog$',
+        ListView.as_view(
+            queryset=Post.objects.filter(is_published=True).order_by('-pub_date'),
+            context_object_name='posts',
+            template_name='blog/post_list.html'
+        ),
+       name='blog'),
     url(r'^blog/', include('blog.urls')),
+    url(r'^links$',
+        ListView.as_view(
+            queryset=ItemLink.objects.all().order_by('order'),
+            context_object_name='links',
+            template_name='links/item_link_list.html'
+        ),
+       name='links'),
 
-    # Uncomment the next line to enable the admin:
+    # Admin
     url(r'^admin/', include(admin.site.urls)),
 )
 
