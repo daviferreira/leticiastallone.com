@@ -1,6 +1,7 @@
 {% load show_menu %}
 {% load render_partial %}
 {% load show_publications %}
+{% load show_highlighted_links %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,7 +42,7 @@
                     <aside class="aside-links">
                         <div class="aside-box">
                             <ul>
-                                <li><a href="#">Curriculum Lattes</a></li>
+                                {% show_highlighted_links %}
                             </ul>
                         </div>
                     </aside>

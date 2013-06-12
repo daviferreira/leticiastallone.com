@@ -1,0 +1,3 @@
+{% for item in itens %}
+    <li><a href="{{ item.links }}" title="{{ item.title }}"{% if item.new_window %} target="_blank"{% endif %}>{{ item.title }}</a></li>
+{% endfor %}
