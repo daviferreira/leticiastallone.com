@@ -1,9 +1,12 @@
 from django.conf import settings
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
+from django.views.generic import ListView
 from django.views.generic.base import RedirectView
 
 from filebrowser.sites import site
+
+from publications.models import Article
 
 
 admin.autodiscover()
@@ -26,6 +29,13 @@ urlpatterns = patterns('',
 
     # Local apps
     url(r'^page/', include('pages.urls')),
+    url(r'^publications$',
+        ListView.as_view(
+            queryset=Article.objects.filter(is_published=True).order_by('-pub_date'),
+            context_object_name='articles',
+            template_name='publications/article_list.html'
+        ),
+       name='publications'),
     url(r'^publication/', include('publications.urls')),
     url(r'^blog/', include('blog.urls')),
 
