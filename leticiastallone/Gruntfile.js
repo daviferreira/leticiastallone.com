@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     compass: {
       dist: {
         options: {
-          sassDir: 'sass/sass',
+          sassDir: 'sass',
           cssDir: 'static/stylesheets',
           outputStyle: 'compressed',
           noLineComments: true
