@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     compass: {
       dist: {
         options: {
-          sassDir: 'assets/sass',
+          sassDir: 'sass/sass',
           cssDir: 'static/stylesheets',
           outputStyle: 'compressed',
           noLineComments: true
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
         }
       },
       styles: {
-        files: 'assets/sass/**/*.scss',
+        files: 'sass/**/*.scss',
         tasks: ['css'],
         options: {
           debounceDelay: 250,
