@@ -8,6 +8,7 @@ from filebrowser.sites import site
 
 from blog.models import Post
 from links.models import ItemLink
+from presentations.models import Presentation
 from publications.models import Article
 
 
@@ -47,6 +48,13 @@ urlpatterns = patterns('',
         ),
        name='blog'),
     url(r'^blog/', include('blog.urls')),
+    url(r'^presentations$',
+        ListView.as_view(
+            queryset=Presentation.objects.all().order_by('-pub_date'),
+            context_object_name='presentations',
+            template_name='presentations/presentation_list.html'
+        ),
+       name='links'),
     url(r'^links$',
         ListView.as_view(
             queryset=ItemLink.objects.all().order_by('order'),

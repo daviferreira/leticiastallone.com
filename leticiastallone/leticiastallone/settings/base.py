@@ -206,6 +206,7 @@ LOCAL_APPS = (
     'links',
     'menu',
     'pages',
+    'presentations',
     'publications',
 )
 
