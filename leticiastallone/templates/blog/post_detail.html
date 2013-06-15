@@ -2,7 +2,7 @@
 
 {% block content %}
 <article class="post-page">
-    <div class="meta">{{ post.tags.all|join:", " }} {{ post.pub_date|date:'F \d\e Y' }}</div>
+    <div class="meta">{% if post.tags %}{{ post.tags.all|join:", " }} &bullet; {% endif %}{{ post.pub_date|date:'F \d\e Y' }}</div>
     <h1 class="post-title">{{ post.title }}</h1>
     <div class="abstract">
         {{ post.abstract|safe }}
