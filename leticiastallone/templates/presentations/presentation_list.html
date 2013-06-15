@@ -7,13 +7,13 @@
         {% for presentation in presentations %}
         <li>
             <div class="meta">{{ presentation.pub_date|date:'F \d\e Y' }}</div>
-            <h4 class="title">{{ presentation.title}}</h4>
-            <div class="deck">
-                {{ presentation.embed|safe }}
-            </div>
+            <h4 class="presentation-title title">{{ presentation.title}}</h4>
             {% if presentation.abstract %}
             <div class="abstract">{{ presentation.abstract|safe }}</div>
             {% endif %}
+            <div class="deck">
+                {{ presentation.embed|safe }}
+            </div>
         </li>
         {% endfor %}
     </ul>
