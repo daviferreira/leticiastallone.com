@@ -188,6 +188,7 @@ a {
 }
 
 .post-title, .publication-title, .title {
+    margin: 4px 0 30px 0;
     font-family: $font_bold;
 }
 
@@ -317,13 +318,17 @@ footer {
     }
 }
 
+.post-page .abstract,
+.publications .abstract {
+    padding-bottom: 20px;
+    font-family: $font_light;
+    font-size: 16px;
+    line-height: 22px;
+}
+
 .post-page {
     padding: 40px;
-    .abstract {
-        font-family: $font_light;
-        padding-bottom: 20px;
-    }
-    .body {
+     .body {
         padding-top: 40px;
         h2 {
             margin-top: 20px;

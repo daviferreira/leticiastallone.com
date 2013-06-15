@@ -4,12 +4,25 @@
 <article class="post-page">
     <div class="meta">{{ article.journal }} &bullet; {{ article.pub_date|date:'F \d\e Y' }}</div>
     <h1 class="post-title">{{ article.title }}</h1>
+    {% if article.authors %}
+    <div class="authors">
+        {{ article.authors|safe }}
+    </div>
+    {% endif %}
     <div class="abstract">
         {{ article.abstract|safe }}
     </div>
+    {% if article.body %}
     <div class="body">
         {{ article.body|safe }}
     </div>
+    {% endif %}
+    {% if article.link %}
+        <p class="read-more"><a href="{{ article.link }}" target="_blank">Ler este artigo na íntegra &rarr;</a></p>
+    {% endif %}
+    {% if article.pdf_file %}
+        <p class="read-more"><a href="{{ article.pdf_file.url }}" target="_blank">Download do PDF do artigo</a></p>
+    {% endif %}
 </article>
 
 <div class="comments" id="comments">
