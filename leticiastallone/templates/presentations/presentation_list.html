@@ -6,6 +6,7 @@
     <ul class="presentations">
         {% for presentation in presentations %}
         <li>
+            <div class="meta">{{ presentation.pub_date|date:'F \d\e Y' }}</div>
             <h4 class="title">{{ presentation.title}}</h4>
             <div class="deck">
                 {{ presentation.embed|safe }}
