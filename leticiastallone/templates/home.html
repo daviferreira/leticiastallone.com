@@ -5,7 +5,7 @@
 {% if posts.0 %}
 <article class="post-item">
     <header>
-        <h4 class="hat">{{ posts.0.tags.all|join:', ' }}</h4>
+        <h4 class="hat">{% if posts.0.tags %}{{ posts.0.tags.all|join:", " }} &bullet; {% endif %}{{ posts.0.pub_date|date:'F \d\e Y' }}</h4>
         <h2 class="post-title"><a href="{% url 'post-detail' posts.0.slug %}">{{ posts.0.title }}</a></h2>
     </header>
     <a href="{% url 'post-detail' posts.0.slug %}">{{ posts.0.abstract|safe }}</a>
@@ -17,7 +17,7 @@
 <div class="six columns alpha">
     <article class="post-item">
         <header>
-            <h4 class="hat">{{ posts.1.tags.all|join:', ' }}</h4>
+            <h4 class="hat">{% if posts.1.tags %}{{ posts.1.tags.all|join:", " }} &bullet; {% endif %}{{ posts.1.pub_date|date:'F \d\e Y' }}</h4>
             <h2 class="post-title"><a href="{% url 'post-detail' posts.1.slug %}">{{ posts.1.title }}</a></h2>
         </header>
         <a href="{% url 'post-detail' posts.1.slug %}">{{ posts.1.abstract|safe }}</a>
@@ -30,7 +30,7 @@
 <div class="six columns omega">
     <article class="post-item">
         <header>
-            <h4 class="hat">{{ posts.2.tags.all|join:', ' }}</h4>
+            <h4 class="hat">{% if posts.2.tags %}{{ posts.2.tags.all|join:", " }} &bullet; {% endif %}{{ posts.2.pub_date|date:'F \d\e Y' }}</h4>
             <h2 class="post-title"><a href="{% url 'post-detail' posts.2.slug %}">{{ posts.2.title }}</a></h2>
         </header>
         <a href="{% url 'post-detail' posts.2.slug %}">{{ posts.2.abstract|safe }}</a>
