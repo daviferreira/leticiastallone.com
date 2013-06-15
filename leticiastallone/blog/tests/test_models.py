@@ -6,7 +6,7 @@ from blog.models import Post
 class TestPostModel(TestCase):
 
     def setUp(self):
-        self.post = Post.objects.create(title="Post 1", body="Post 1 body", tags="post, test")
+        self.post = Post.objects.create(title="Post 1", body="Post 1 body", abstract="Test")
 
     def tearDown(self):
         Post.objects.all().delete()

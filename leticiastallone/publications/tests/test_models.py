@@ -13,7 +13,6 @@ class TestArticleModel(TestCase):
                                            abstract="Article 1 abstract",
                                            authors=u'Letícia, Davi',
                                            journal='Journal of Automated Testing',
-                                           keywords="article, test",
                                            pub_date=datetime.now())
 
     def tearDown(self):

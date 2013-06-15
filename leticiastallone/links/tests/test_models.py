@@ -16,4 +16,4 @@ class TestItemLinkModel(TestCase):
         ItemLink.objects.all().delete()
 
     def test_unicode_should_return_the_item_link_title(self):
-        self.assertEqual(str(self.item_link), "%s <%s>" % (self.item_link.title, self.item_link.link))
+        self.assertEqual(str(self.item_link), "%s" % self.item_link.title)

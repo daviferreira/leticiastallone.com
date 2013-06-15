@@ -12,4 +12,4 @@ class TestItemMenuModel(TestCase):
         ItemMenu.objects.all().delete()
 
     def test_unicode_should_return_the_item_menu_title(self):
-        self.assertEqual(str(self.item_menu), "%s <%s>" % (self.item_menu.label, self.item_menu.link))
+        self.assertEqual(str(self.item_menu), "%s" % self.item_menu.label)

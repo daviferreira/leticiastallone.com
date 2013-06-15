@@ -10,4 +10,4 @@ class ItemLink(models.Model):
     highlight = models.BooleanField(default=False)
 
     def __unicode__(self):
-        return "%s <%s>" % (self.title, self.link)
+        return "%s" % self.title

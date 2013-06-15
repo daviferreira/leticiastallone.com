@@ -7,4 +7,4 @@ class ItemMenu(models.Model):
     order = models.IntegerField(default=100000)
 
     def __unicode__(self):
-        return "%s <%s>" % (self.label, self.link)
+        return "%s" % self.label

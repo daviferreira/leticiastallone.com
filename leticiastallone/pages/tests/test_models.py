@@ -6,7 +6,7 @@ from pages.models import Page
 class TestPageModel(TestCase):
 
     def setUp(self):
-        self.page = Page.objects.create(title="Page 1", body="Page 1 body", keywords="page, test")
+        self.page = Page.objects.create(title="Page 1", body="Page 1 body", abstract="Test")
 
     def tearDown(self):
         Page.objects.all().delete()
