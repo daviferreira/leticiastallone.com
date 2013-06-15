@@ -19,7 +19,7 @@
                 {% if articles.1 %}
                  <article class="publication-item">
                     <header>
-                        <h4 class="hat">{{ articles.1.journal }} &bullet; {{ articles.0.pub_date|date:'F \d\e Y' }}</h4>
+                        <h4 class="hat">{{ articles.1.journal }} &bullet; {{ articles.1.pub_date|date:'F \d\e Y' }}</h4>
                         <h2 class="publication-title"><a href="{% url 'article-detail' articles.1.slug %}">{{ articles.1.title }}</a></h2>
                     </header>
                     <p class="read-more"><a href="{% url 'article-detail' articles.1.slug %}">Ler este artigo &rarr;</a></p>
