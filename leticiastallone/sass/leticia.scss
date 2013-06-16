@@ -17,7 +17,7 @@ body {
     font-weight: 400;
     color: #333332;
     font-size: 18px;
-    line-height: 1.4;
+    line-height: 26px;
 }
 
 a {
@@ -35,6 +35,8 @@ a {
 
 .hat, .meta {
     font-size: 12px;
+    text-transform: uppercase;
+    color: #535353;
 }
 
 .masthead {
@@ -194,9 +196,14 @@ a {
 
 .post-item {
     padding: 20px;
-    .hat {
-        text-transform: uppercase;
-        color: #535353;
+    margin-bottom: 40px;
+    border-bottom: 1px dashed $border_color;
+    &:last-child {
+        border-bottom: none;
+    }
+    p {
+        font-family: $font;
+        line-height: 1.2;
     }
     .post-title {
         margin: 0 0 20px 0;
@@ -204,16 +211,6 @@ a {
         letter-spacing: -1px;
         line-height: 1.2;
         color: $title_color;
-    }
-    article {
-        margin-bottom: 40px;
-        border-bottom: 1px dashed $border_color;
-        &:last-child {
-            border-bottom: none;
-        }
-        p {
-            line-height: 1.2;
-        }
     }
     .post-title a, a p {
         color: #333;
@@ -276,10 +273,11 @@ a {
             color: $title_color;
         }
     }
-    .hat {
-        text-transform: uppercase;
-        color: #535353;
-    }
+}
+
+.authors {
+    margin-bottom: 50px;
+    font-style: oblique;
 }
 
 footer {
@@ -318,18 +316,19 @@ footer {
     }
 }
 
-.post-page .abstract,
-.publications .abstract {
-    padding-bottom: 20px;
+.abstract {
     font-family: $font_light;
-    font-size: 16px;
-    line-height: 22px;
 }
 
 .post-page {
     padding: 40px;
-     .body {
-        padding-top: 40px;
+    .abstract {
+        padding-bottom: 0;
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .body {
+        padding-top: 20px;
         h2 {
             margin-top: 20px;
         }
@@ -338,6 +337,13 @@ footer {
         text-transform: uppercase;
         color: #535353;
     }
+}
+
+.article-page .abstract,
+.publications .abstract {
+    padding-bottom: 20px;
+    font-size: 16px;
+    line-height: 22px;
 }
 
 .comments {
