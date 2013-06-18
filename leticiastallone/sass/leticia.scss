@@ -390,3 +390,41 @@ footer {
         }
     }
 }
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .masthead {
+        .title {
+            padding-left: 10px;
+        }
+        small {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .masthead-fixed {
+        display: none;
+    }
+    .masthead {
+        .title {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        small {
+            display: none;
+        }
+    }
+    .main-menu {
+        text-align: center;
+        a {
+            padding: 0 6px;
+            &:last-child {
+                padding-right: 6px;
+            }
+        }
+    }
+    .aside-links {
+        margin-bottom: 30px;
+    }
+}
