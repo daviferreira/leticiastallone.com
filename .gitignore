@@ -31,3 +31,6 @@ _SpecRunner.html
 
 # Uploaded files
 media/
+
+# Virtualenv
+.env
