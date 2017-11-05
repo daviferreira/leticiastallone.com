@@ -6,6 +6,7 @@ django-model-utils==1.1.0
 django-pylibmc==0.6.1
 django-taggit==0.10a1
 django==1.5
+dj-database-url==0.4.2
 logutils==0.3.3
 Pillow==1.7.8
 psycopg2==2.7.3.2
