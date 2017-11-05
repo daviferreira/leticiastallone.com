@@ -3,10 +3,12 @@ django-braces==0.2.1
 django-filebrowser==3.5.2
 django-grappelli==2.4.5
 django-model-utils==1.1.0
+django-pylibmc==0.6.1
 django-taggit==0.10a1
 django==1.5
 logutils==0.3.3
 Pillow==1.7.8
 psycopg2==2.7.3.2
+pylibmc==1.5.2
 South==0.7.6
 whitenoise==2.0.6

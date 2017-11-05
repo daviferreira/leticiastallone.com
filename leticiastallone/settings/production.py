@@ -67,6 +67,32 @@ DATABASES['default'].update(db_from_env)
 ########## END DATABASE CONFIGURATION
 
 
+########## CACHE CONFIGURATION
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#caches
+def get_cache():
+  try:
+    environ['MEMCACHE_SERVERS'] = environ['MEMCACHIER_SERVERS'].replace(',', ';')
+    environ['MEMCACHE_USERNAME'] = environ['MEMCACHIER_USERNAME']
+    environ['MEMCACHE_PASSWORD'] = environ['MEMCACHIER_PASSWORD']
+    return {
+      'default': {
+        'BACKEND': 'django_pylibmc.memcached.PyLibMCCache',
+        'TIMEOUT': 500,
+        'BINARY': True,
+        'OPTIONS': { 'tcp_nodelay': True }
+      }
+    }
+  except:
+    return {
+      'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache'
+      }
+    }
+
+CACHES = get_cache()
+########## END CACHE CONFIGURATION
+
+
 ########## SECRET CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 SECRET_KEY = get_env_setting('SECRET_KEY')
