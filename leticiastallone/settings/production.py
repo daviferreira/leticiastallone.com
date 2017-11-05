@@ -17,7 +17,7 @@ def get_env_setting(setting):
 	except KeyError:
 		error_msg = "Set the %s env variable" % setting
 		raise ImproperlyConfigured(error_msg)
-		
+
 INSTALLED_APPS += ('gunicorn',)
 
 ########## EMAIL CONFIGURATION
@@ -62,3 +62,5 @@ CACHES = {}
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 SECRET_KEY = get_env_setting('SECRET_KEY')
 ########## END SECRET CONFIGURATION
+
+ALLOWED_HOSTS =['*']
