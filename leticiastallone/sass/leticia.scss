@@ -1,10 +1,9 @@
 @import "clearfix";
-@import "fonts";
 @import "compass/css3";
 
-$font: "ProximaNovaRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font_bold: "ProximaNovaBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font_light: "ProximaNovaLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font_bold: $font;
+$font_light: $font;
 $serif: Georgia, Cambria, "Times New Roman", Times, serif;
 $link_color: #c44d58;
 $link_hover: #67232a;
@@ -16,8 +15,8 @@ body {
     font-family: $serif;
     font-weight: 400;
     color: #333332;
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 16px;
+    line-height: 1.4;
 }
 
 a {
@@ -47,7 +46,6 @@ a {
     @include transition(margin-top .3s ease-out);
 
     .title {
-        font-weight: normal;
         letter-spacing: -2px;
         color: #556270;
     }
@@ -55,7 +53,6 @@ a {
     small {
         display: inline-block;
         margin-left: 2px;
-        font-weight: normal;
         color: #999;
     }
 }
@@ -209,7 +206,6 @@ a {
     }
     .post-title {
         margin: 0 0 20px 0;
-        font-weight: normal;
         letter-spacing: -1px;
         line-height: 1.2;
         color: $title_color;
@@ -270,7 +266,6 @@ a {
 .publication-item {
     padding: 20px;
     .publication-title {
-        font-weight: normal;
         line-height: 1.2;
         a {
             color: $title_color;
